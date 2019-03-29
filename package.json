@@ -4,7 +4,8 @@
   "description": "Memoized version of React useState",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"babel": "babel src --out-dir ./dist/",
+    "prepare": "npm run babel",
   },
   "repository": {
     "type": "git",
