@@ -1,4 +1,4 @@
-# useState-memoized
+# usestate-memoize
 
 ## memoize/cache solution for React useState
 
@@ -34,7 +34,7 @@ While this change of references are pretty insignificant [Are hooks slow because
 ### Installation
 
 ```javascript
-npm i usestate-memoizee
+npm i usestate-memoize
 ```
 
 ### Usage
@@ -73,7 +73,7 @@ const Button = memo(({onClick, children}) => {
 ```javascript
 const _inc = c => c+1;
 const _dec = c => c-1;
-const MyCounter = memo(() => {
+const MyCounter = () => {
     const [ count, setCount, defineCountActions] = useState(0)
 
 	const increment = defineCountActions(_inc);
@@ -84,7 +84,7 @@ const MyCounter = memo(() => {
         <Button onClick={decrement}>Decrement me!</Button>
         <span>Value is {count}</span>
     </>
-});
+};
 ```
 
 Note that `_inc` and `_dec` are defined **OUTSIDE** of component. If you define these functions inside your functional component, they will be re-created each-time, and you'll loose memoization.
@@ -94,8 +94,8 @@ Note that `_inc` and `_dec` are defined **OUTSIDE** of component. If you define 
 ```javascript
 const _inc = c => c+1;
 const _dec = c => c-1;
-const MyCounter = memo(() => {
-    const [ count,,, {increment, decrement}] = useState(0, {
+const MyCounter = () => {
+    const [ count,,, { increment, decrement } ] = useState(0, {
 		increment: _inc,
 		decrement: _dec,
 	})
@@ -105,4 +105,4 @@ const MyCounter = memo(() => {
         <Button onClick={decrement}>Decrement me!</Button>
         <span>Value is {count}</span>
     </>
-});
+};

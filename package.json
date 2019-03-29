@@ -1,6 +1,6 @@
 {
   "name": "usestate-memoize",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Memoized version of React useState",
   "main": "dist/index.js",
   "scripts": {
@@ -43,6 +43,6 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
-	"react": "^16.8.6"
+    "react": "^16.8.6"
   }
 }
