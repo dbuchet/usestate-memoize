@@ -1,6 +1,6 @@
 {
   "name": "usestate-memoize",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Memoized version of React useState",
   "main": "dist/index.js",
   "scripts": {
@@ -31,8 +31,7 @@
   },
   "homepage": "https://github.com/dbuchet/usestate-memoize#readme",
   "dependencies": {
-    "memoizee": "^0.4.14",
-    "react": "^16.8.6"
+    "memoizee": "^0.4.14"
   },
   "browserslist": [
     ">0.2%",
@@ -43,6 +42,7 @@
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.4.0",
-    "@babel/preset-env": "^7.4.2"
+    "@babel/preset-env": "^7.4.2",
+	"react": "^16.8.6"
   }
 }
