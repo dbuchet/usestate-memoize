@@ -1,6 +1,6 @@
 {
   "name": "usestate-memoize",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Memoized version of React useState",
   "main": "dist/index.js",
   "scripts": {

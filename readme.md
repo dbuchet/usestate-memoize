@@ -110,6 +110,7 @@ const MyCounter = () => {
         <span>Value is {count}</span>
     </>
 };
+```
 
 Please not the double arrow function `const _inc = () => c => c+1;`. If needed, first function argument is the `SyntheticEvent` returned by React. Keep in mind that `SyntheticEvent` are immediately destroyed by React after callback. So because these functions are memoized, the `SyntheticEvent` event will be lost after first call. To bypass this, we trigger a `SyntheticEvent.persist()` before memoization.
 Second function argument is the current state value.
@@ -125,3 +126,4 @@ const MyInput = () => {
         <input onChange={setValue} value={value} />
     </>
 };
+```
