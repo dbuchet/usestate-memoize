@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import memoize from 'memoizee';
 
-const execute = memoize(set => memoize(action => () => set(action)));
+const execute = memoize(set => memoize(action => e => {
+	if (e) e.persist();
+	set(action(e));
+}))
 
 export default (initialProps, actions) => {
 	const [ value, setValue ] = useState(initialProps);
