@@ -2,7 +2,7 @@
 
 ## memoize/cache solution for React useState
 
-This package uses [React.useState](https://reactjs.org/docs/hooks-state.html) and [React.useState](https://github.com/medikoo/memoizee) for cache solution.
+This package uses [React.useState](https://reactjs.org/docs/hooks-state.html) and [Memoizee](https://github.com/medikoo/memoizee) for cache solution.
 
 ### What's the "problem" with React.useState
 What happen in a code like this one?
